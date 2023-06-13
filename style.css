@@ -1,0 +1,27 @@
+body {
+    background-image: url("china1.gif");
+    background-size: cover;  /* This will stretch the gif to cover the entire element */
+    background-repeat: no-repeat;  /* This ensures the image doesn't repeat */
+}
+
+.background-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-image: url('china1.gif');
+    background-size: cover;
+    z-index: -1;
+}
+
+header {
+    text-align: center;
+    padding-top: 20%;
+    color: white;
+}
+
+main {
+    text-align: center;
+    color: white;
+}

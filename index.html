@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Landing Page</title>
+        <style>
+            @font-face {
+                font-family: 'Scream';
+                src: url('scream.ttf');
+            }
+
+            body {
+                margin: 0;
+                padding: 0;
+            }
+
+            .background-gif {
+                height: 100vh;
+                background-image: url('china1.gif');
+                background-size: cover;
+                background-repeat: no-repeat;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                position: relative;
+                border-bottom: 5px solid black;  /* Black line at the bottom of the gif */
+            }
+
+            .background-img {
+                height: 100vh;
+                background-image: url('china1.png');
+                background-size: cover;
+                background-repeat: no-repeat;
+                position: relative; /* Make this a positioning context for the button */
+            }
+
+            .buy-button {
+                background-color: yellow;
+                color: black;
+                border: 3px solid black;
+                border-radius: 20px;
+                font-size: 2em;
+                font-weight: bold;
+                padding: 15px 30px;
+                margin-bottom: 20px;
+                cursor: pointer;
+            }
+
+            .large-buy-button {
+                position: absolute;
+                top: 85%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                background-color: yellow;
+                color: black;
+                border: 3px solid black;
+                border-radius: 20px;
+                font-size: 4em;
+                font-weight: bold;
+                padding: 45px 90px;
+                cursor: pointer;
+            }
+
+            .bold-text {
+                font-family: 'Scream', sans-serif;
+                font-size: 5em;
+                color: red;
+                text-align: center;
+                margin-bottom: 20px;
+            }
+
+            .small-text {
+                font-size: 2em;
+                color: black;
+                text-align: center;
+            }
+
+            /* Define the common styles for the icon divs */
+            .icon {
+                position: absolute;
+                left: 85%;
+                transform: translate(-50%, -50%);
+                z-index: 1000;
+                cursor: pointer;
+            }
+
+            /* Define the common styles for the icon images */
+            .icon img {
+                width: 100px; /* adjust size as needed */
+                height: 100px; /* adjust size as needed */
+                transition: transform 0.3s ease-in-out; /* Animate the transformation */
+            }
+
+            /* Increase the size of the icon images on hover */
+            .icon:hover img {
+                transform: scale(1.1); /* Increase the size by 10% */
+            }
+
+            #etherscan-icon {
+                top: 22%;
+            }
+
+            #chart-icon {
+                top: 39%;
+            }
+
+            #discord-icon {
+                top: 72%;
+            }
+
+            #twitter-icon {
+                top: 48%;
+                left:82%;
+                transform: scale(1, .8);
+            }
+
+        </style>
+    </head>
+    <body>
+        <div class="background-gif">
+            <button class="buy-button">Buy Here</button>
+            <div class="bold-text">$PERV</div>
+            <div class="small-text">Make America Greatest of All Time Again</div>
+        </div>
+        <div class="background-img">
+            <!-- The large buy button is here -->
+            <button class="large-buy-button" onclick="window.open('https://dexscreener.com')">Buy Here</button>
+            <!-- You can put more content here if you like -->
+        </div>
+
+        <div class="icon" id="etherscan-icon" onclick="window.open('https://etherscan.io', '_blank')">
+            <img src="etherscan.png" alt="Etherscan">
+        </div>
+
+        <div class="icon" id="chart-icon" onclick="window.open('https://dexscreener.com', '_blank')">
+            <img src="chart.png" alt="Chart">
+        </div>
+
+        <div class="icon" id="discord-icon" onclick="window.open('https://discord.gg/', '_blank')">
+            <img src="discord.png" alt="Discord">
+        </div>
+
+        <div class="icon" id="twitter-icon" onclick="window.open('https://twitter.com/WuWei113', '_blank')">
+            <img src="twitter.png" alt="Twitter">
+        </div>
+    </body>
+</html>
